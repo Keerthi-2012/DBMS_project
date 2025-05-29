@@ -1,6 +1,148 @@
 import pymysql.cursors
 from datetime import datetime
 
+# Insert Functions
+def seasonInsert(): pass
+def matchInsert(): pass
+def teamInsert(): pass
+def playerInsert(): pass
+def tossInsert(): pass
+def venueInsert(): pass
+def batsmanScoreInsert(): pass
+def bowlerStatInsert(): pass
+
+# Update Functions
+def updateMatch(): pass
+def updateTeam(): pass
+def updatePlayer(): pass
+def updateVenue(): pass
+def updateBatsmanScore(): pass
+def updateBowlerStat(): pass
+
+# Delete / Archive Functions
+def deleteTeams(): pass
+def archivePlayerRecord(): pass
+def deleteVenue(): pass
+
+# Search Functions
+def searchChampion(): pass
+def searchMatch(): pass
+def searchVenue(): pass
+def searchTeam(): pass
+def searchPlayer(): pass
+def searchSeason(): pass
+
+# Aggregate / Stats / List Functions
+def aggregateVenueData(): pass
+def matchResultofaTeam(): pass
+def teamStatistics(): pass
+def listCurrentTeams(): pass
+def listMatchesbyDate(): pass
+def listMatchResults(): pass
+def venuesAvailable(): pass
+def pointsTable(): pass
+
+
+def dispatchAdmin(ch):
+    """
+    Function that maps helper functions to admin options entered
+    """
+    if ch == 1:
+        seasonInsert()
+    elif ch == 2:
+        matchInsert()
+    elif ch == 3:
+        teamInsert()
+    elif ch == 4:
+        playerInsert()
+    elif ch == 5:
+        tossInsert()
+    elif ch == 6:
+        venueInsert()
+    elif ch == 7:
+        batsmanScoreInsert()
+    elif ch == 8:
+        bowlerStatInsert()
+    elif ch == 9:
+        updateMatch()
+    elif ch == 10:
+        updateTeam()
+    elif ch == 11:
+        updatePlayer()
+    elif ch == 12:
+        updateVenue()
+    elif ch == 13:
+        updateBatsmanScore()
+    elif ch == 14:
+        updateBowlerStat()
+    elif ch == 15:
+        deleteTeams()
+    elif ch == 16:
+        archivePlayerRecord()
+    elif ch == 17:
+        deleteVenue()
+    elif ch == 18:
+        searchChampion()
+    elif ch == 19:
+        searchMatch()
+    elif ch == 20:
+        searchVenue()
+    elif ch == 21:
+        searchTeam()
+    elif ch == 22:
+        searchPlayer()
+    elif ch == 23:
+        searchSeason()
+    elif ch == 24:
+        aggregateVenueData()
+    elif ch == 25:
+        matchResultofaTeam()
+    elif ch == 26:
+        teamStatistics()
+    elif ch == 27:
+        listCurrentTeams()
+    elif ch == 28:
+        listMatchesbyDate()
+    elif ch == 29:
+        listMatchResults()
+    elif ch == 30:
+        venuesAvailable()
+    elif ch == 31:
+        pointsTable()
+
+def dispatchUser(ch):
+    """
+    Function that maps helper functions to regular user options entered
+    """
+    if ch == 1:
+        searchChampion()
+    elif ch == 2:
+        searchMatch()
+    elif ch == 3:
+        searchVenue()
+    elif ch == 4:
+        searchTeam()
+    elif ch == 5:
+        searchPlayer()
+    elif ch == 6:
+        searchSeason()
+    elif ch == 7:
+        aggregateVenueData()
+    elif ch == 8:
+        matchResultofaTeam()
+    elif ch == 9:
+        teamStatistics()
+    elif ch == 10:
+        listCurrentTeams()
+    elif ch == 11:
+        listMatchesbyDate()
+    elif ch == 12:
+        listMatchResults()
+    elif ch == 13:
+        venuesAvailable()
+    elif ch == 14:
+        pointsTable()
+
 while True:
     username = input("Username: ")
     password = input("Password: ")
